@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="APRS Data Storage" Height="324.031" Width="521.082" Icon="resources/Dapino-Beach-Air-balloon.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="302*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="208*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txtCallsign" HorizontalAlignment="Left" Height="23" Margin="72,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152"/>
+        <Label Content="Callsign:" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="57"/>
+        <Button x:Name="btnGenerate" Content="Generate!" HorizontalAlignment="Left" Height="24" Margin="28,40,0,0" VerticalAlignment="Top" Width="94" Click="btnGenerate_Click" IsDefault="True"/>
+        <Label Content="Latitude (deg):" HorizontalAlignment="Left" Height="28" Margin="28,114,0,0" VerticalAlignment="Top" Width="86"/>
+        <Label Content="Longitude (deg):" HorizontalAlignment="Left" Height="28" Margin="28,142,0,0" VerticalAlignment="Top" Width="103"/>
+        <Label Content="Altitude (m):" HorizontalAlignment="Left" Height="28" Margin="28,170,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Comment:" HorizontalAlignment="Left" Height="28" Margin="149,73,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Temperature (C):" HorizontalAlignment="Left" Height="28" Margin="210,114,0,0" VerticalAlignment="Top" Width="98" Grid.ColumnSpan="3"/>
+        <Label Content="Humidity (%):" HorizontalAlignment="Left" Height="28" Margin="210,142,0,0" VerticalAlignment="Top" Width="98" Grid.ColumnSpan="3"/>
+        <Label Content="Pressure (mBars):" HorizontalAlignment="Left" Height="28" Margin="210,170,0,0" VerticalAlignment="Top" Width="110" Grid.ColumnSpan="3"/>
+        <Label Content="Wind speed (m/s):" HorizontalAlignment="Left" Height="28" Margin="210,198,0,0" VerticalAlignment="Top" Width="110" Grid.ColumnSpan="3"/>
+        <Label Content="Wind direction (deg):" HorizontalAlignment="Left" Height="28" Margin="210,226,0,0" VerticalAlignment="Top" Width="127" RenderTransformOrigin="0.467,0.179" Grid.ColumnSpan="3"/>
+        <Label x:Name="lblLat" Content="" HorizontalAlignment="Left" Height="28" Margin="131,114,0,0" VerticalAlignment="Top" Width="74"/>
+        <Label x:Name="lblLng" Content="" HorizontalAlignment="Left" Height="28" Margin="131,142,0,0" VerticalAlignment="Top" Width="74"/>
+        <Label x:Name="lblAlt" Content="" HorizontalAlignment="Left" Height="28" Margin="131,170,0,0" VerticalAlignment="Top" Width="74"/>
+        <Label x:Name="lblTemp" Content="" HorizontalAlignment="Left" Height="28" Margin="68,114,0,0" VerticalAlignment="Top" Width="84" Grid.Column="2"/>
+        <Label x:Name="lblHum" Content="" HorizontalAlignment="Left" Height="28" Margin="68,142,0,0" VerticalAlignment="Top" Width="84" Grid.Column="2"/>
+        <Label x:Name="lblWindD" Content="" HorizontalAlignment="Left" Height="28" Margin="68,226,0,0" VerticalAlignment="Top" Width="84" Grid.Column="2"/>
+        <Label x:Name="lblWindS" Content="" HorizontalAlignment="Left" Height="28" Margin="68,198,0,0" VerticalAlignment="Top" Width="84" Grid.Column="2"/>
+        <Label x:Name="lblPres" Content="" HorizontalAlignment="Left" Height="28" Margin="68,170,0,0" VerticalAlignment="Top" Width="84" Grid.Column="2"/>
+        <Label x:Name="lblCom" Content="" HorizontalAlignment="Left" Height="40" Margin="224,74,0,0" VerticalAlignment="Top" Width="229" Grid.ColumnSpan="3"/>
+        <Button x:Name="btnStop" Content="Stop!" HorizontalAlignment="Left" Height="24" Margin="28,74,0,0" VerticalAlignment="Top" Width="94" Click="btnStop_Click"/>
+        <Label Content="Time last pinged:" Height="30" Margin="149,39,45,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTime" Content="" HorizontalAlignment="Left" Height="23" Margin="257,39,0,0" VerticalAlignment="Top" Width="151" Grid.ColumnSpan="3"/>
+        <Label x:Name="lblGenerating" Content="Not generating data..." Grid.Column="2" HorizontalAlignment="Left" Height="26" Margin="68,7,0,0" VerticalAlignment="Top" Width="129"/>
+
+    </Grid>
+</Window>
