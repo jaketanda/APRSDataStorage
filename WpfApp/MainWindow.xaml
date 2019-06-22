@@ -37,6 +37,8 @@
         <Label Content="Time last pinged:" Height="30" Margin="149,39,45,0" VerticalAlignment="Top"/>
         <Label x:Name="lblTime" Content="" HorizontalAlignment="Left" Height="23" Margin="257,39,0,0" VerticalAlignment="Top" Width="151" Grid.ColumnSpan="3"/>
         <Label x:Name="lblGenerating" Content="Not generating data..." Grid.Column="2" HorizontalAlignment="Left" Height="26" Margin="68,7,0,0" VerticalAlignment="Top" Width="129"/>
+        <TextBox x:Name="txtInterval" HorizontalAlignment="Left" Height="22" Margin="20,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="43" Grid.Column="2" TextAlignment="Right" Text="1"/>
+        <Label Content="Interval (min):" HorizontalAlignment="Left" Height="27" Margin="238,7,0,0" VerticalAlignment="Top" Width="82" Grid.ColumnSpan="3"/>
 
     </Grid>
 </Window>

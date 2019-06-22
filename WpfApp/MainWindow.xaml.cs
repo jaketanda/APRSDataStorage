@@ -26,6 +26,7 @@ namespace WpfApp
         private System.Timers.Timer MinuteTimer; // timer for reloading data
         private int row;         // excel row
         private string callsign; // callsign
+        private int interval;
 
         public MainWindow()
         {
@@ -38,6 +39,19 @@ namespace WpfApp
 
         private void btnGenerate_Click(object sender, RoutedEventArgs e)
         {
+            // check for interval time and test for errors.
+            try
+            {
+                this.Dispatcher.Invoke(() =>
+                {
+                    interval = Convert.ToInt32(txtInterval.Text);
+                });
+            }
+            catch
+            {
+                return;
+            }
+
             this.Dispatcher.Invoke(() =>
             {
                 lblGenerating.Content = "Generating!";
@@ -66,14 +80,15 @@ namespace WpfApp
             excel = new Excel(); // create new instance of excel
             excel.CreateNewFile(); // create new excel file
             AddHeaders(); // add the headers to each category in the excel file
-            SetTimer();  // start the timer 
+            
+            SetTimer(interval);  // start the timer 
         }
 
         // Start the timer for one minute
-        private void SetTimer()
+        private void SetTimer(int Interval)
         {
             RecordData();
-            MinuteTimer = new System.Timers.Timer(60000);
+            MinuteTimer = new System.Timers.Timer(Interval * 60000);
             MinuteTimer.Elapsed += RecordData; // every time the timer reaches 0, record the data at that time
             MinuteTimer.AutoReset = true;
             MinuteTimer.Enabled = true;
