@@ -94,7 +94,7 @@ namespace WpfApp
             MinuteTimer.Enabled = true;
         }
 
-        // two separate recorddata functions, one for the start, and one for every time the timer hits 0.
+        // two separate recorddata functions, one for the start, and one for every time the timer hits 0. aS
         private void RecordData()
         {
             labelRefresh();

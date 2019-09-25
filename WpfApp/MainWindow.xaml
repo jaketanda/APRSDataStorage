@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="APRS Data Storage" Height="324.031" Width="521.082" Icon="resources/Dapino-Beach-Air-balloon.ico">
+        Title="APRS Data Storage 3.0" Height="324.031" Width="521.082" Icon="resources/Dapino-Beach-Air-balloon.ico">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="302*"/>
