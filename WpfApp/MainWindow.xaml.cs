@@ -88,7 +88,7 @@ namespace WpfApp
         private void SetTimer(int Interval)
         {
             RecordData();
-            MinuteTimer = new System.Timers.Timer(Interval * 60000);
+            MinuteTimer = new System.Timers.Timer(Interval * 1000);
             MinuteTimer.Elapsed += RecordData; // every time the timer reaches 0, record the data at that time
             MinuteTimer.AutoReset = true;
             MinuteTimer.Enabled = true;
